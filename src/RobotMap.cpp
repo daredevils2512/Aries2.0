@@ -12,6 +12,10 @@ Jaguar* RobotMap::drivetrainSpeedController3 = NULL;
 Jaguar* RobotMap::drivetrainSpeedController4 = NULL;
 RobotDrive* RobotMap::drivetrainRobotDrive = NULL;
 
+Relay* RobotMap::compressorSubsystemCompressorSpike = NULL;
+DigitalInput* RobotMap::compressorSubsystemCompressorPressureSwitch = NULL;
+
+
 
 void RobotMap::init() {
 	LiveWindow* lw = LiveWindow::GetInstance();
@@ -49,4 +53,10 @@ void RobotMap::init() {
 	drivetrainRobotDrive->SetExpiration(0.1);
 	drivetrainRobotDrive->SetSensitivity(0.5);
 	drivetrainRobotDrive->SetMaxOutput(1.0);
+
+	compressorSubsystemCompressorSpike = new Relay(2);
+	lw->AddActuator("CompressorSubsystem", "CompressorSpike", compressorSubsystemCompressorSpike);
+
+	compressorSubsystemCompressorPressureSwitch = new DigitalInput(7);
+	lw->AddSensor("CompressorSubsystem", "CompressorPressureSwitch", compressorSubsystemCompressorPressureSwitch);
 }

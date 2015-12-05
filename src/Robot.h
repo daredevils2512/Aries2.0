@@ -8,6 +8,7 @@
 #ifndef SRC_ROBOT_H_
 #define SRC_ROBOT_H_
 
+#include <Subsystems/CompressorSubsystem.h>
 #include "WPILib.h"
 #include "Commands/Command.h"
 #include "Commands/ExampleCommand.h"
@@ -16,7 +17,7 @@
 #include "LiveWindow/LiveWindow.h"
 
 #include "Subsystems/Drivetrain.h"
-
+#include "Subsystems/CompressorSubsystem.h"
 #include "OI.h"
 
 class Robot: public IterativeRobot
@@ -25,6 +26,7 @@ public:
 	Command *autonomousCommand;
 	LiveWindow *lw;
 	static DriveTrain* drivetrain;
+	static CompressorSubsystem* compressorSubsystem;
 	static Joystick* stick;
 	static OI* oi;
 

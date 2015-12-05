@@ -5,6 +5,7 @@
 #include "Robot.h"
 
 DriveTrain* Robot::drivetrain = 0;
+CompressorSubsystem* Robot::compressorSubsystem = 0;
 OI* Robot::oi = 0;
 
 void Robot::RobotInit()
@@ -13,6 +14,7 @@ void Robot::RobotInit()
 	autonomousCommand = new ExampleCommand();
 	lw = LiveWindow::GetInstance();
 	drivetrain = new DriveTrain();
+	compressorSubsystem = new CompressorSubsystem();
 	oi = new OI();
 }
 

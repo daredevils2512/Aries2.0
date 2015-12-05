@@ -3,6 +3,7 @@
 
 #include "WPILib.h"
 #include "Subsystems/Drivetrain.h"
+#include "Subsystems/CompressorSubsystem.h"
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -33,6 +34,9 @@ public:
 	static Jaguar* drivetrainSpeedController3;
 	static Jaguar* drivetrainSpeedController4;
 	static RobotDrive* drivetrainRobotDrive;
+
+	static Relay* compressorSubsystemCompressorSpike;
+	static DigitalInput* compressorSubsystemCompressorPressureSwitch;
 
 	static void init();
 };
