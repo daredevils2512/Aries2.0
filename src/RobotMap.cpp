@@ -54,9 +54,9 @@ void RobotMap::init() {
 	drivetrainRobotDrive->SetSensitivity(0.5);
 	drivetrainRobotDrive->SetMaxOutput(1.0);
 
-	compressorSubsystemCompressorSpike = new Relay(2);
+	compressorSubsystemCompressorSpike = new Relay(1);
 	lw->AddActuator("CompressorSubsystem", "CompressorSpike", compressorSubsystemCompressorSpike);
 
-	compressorSubsystemCompressorPressureSwitch = new DigitalInput(7);
+	compressorSubsystemCompressorPressureSwitch = new DigitalInput(1);
 	lw->AddSensor("CompressorSubsystem", "CompressorPressureSwitch", compressorSubsystemCompressorPressureSwitch);
 }
