@@ -27,5 +27,5 @@ void DriveTrain::InitDefaultCommand()
 // here. Call these from Commands.
 
 void DriveTrain::Go(float move, float turn) {
-	robotDrive->ArcadeDrive(move, turn, false);
+	robotDrive->ArcadeDrive(move, turn);
 }

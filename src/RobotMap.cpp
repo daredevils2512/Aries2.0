@@ -46,8 +46,7 @@ void RobotMap::init() {
 	drivetrainSpeedController4 = new Jaguar(4);
 	lw->AddActuator("Drivetrain", "Speed Controller 4", (TalonSRX*) drivetrainSpeedController4);
 
-	drivetrainRobotDrive = new RobotDrive(drivetrainSpeedController1, drivetrainSpeedController2,
-              drivetrainSpeedController3, drivetrainSpeedController4);
+	drivetrainRobotDrive = new RobotDrive(drivetrainSpeedController1, drivetrainSpeedController2);
 
 	drivetrainRobotDrive->SetSafetyEnabled(false);
 	drivetrainRobotDrive->SetExpiration(0.1);
