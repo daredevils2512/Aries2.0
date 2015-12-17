@@ -37,13 +37,13 @@ void RobotMap::init() {
 	drivetrainbackRight->SetDistancePerPulse(1.0);
 		//drivetrainbackRight->setPIDSourceParameter(Encoder:kRate);
 
-	drivetrainSpeedController1 = new Jaguar(1);
+	drivetrainSpeedController1 = new Jaguar(0);
 	lw->AddActuator("Drivetrain", "Speed Controller 1", (TalonSRX*) drivetrainSpeedController1);
-	drivetrainSpeedController2 = new Jaguar(2);
+	drivetrainSpeedController2 = new Jaguar(1);
 	lw->AddActuator("Drivetrain", "Speed Controller 2", (TalonSRX*) drivetrainSpeedController2);
-	drivetrainSpeedController3 = new Jaguar(3);
+	drivetrainSpeedController3 = new Jaguar(2);
 	lw->AddActuator("Drivetrain", "Speed Controller 3", (TalonSRX*) drivetrainSpeedController3);
-	drivetrainSpeedController4 = new Jaguar(4);
+	drivetrainSpeedController4 = new Jaguar(3);
 	lw->AddActuator("Drivetrain", "Speed Controller 4", (TalonSRX*) drivetrainSpeedController4);
 
 	drivetrainRobotDrive = new RobotDrive(drivetrainSpeedController1, drivetrainSpeedController2);
