@@ -15,7 +15,7 @@
 #include "CommandBase.h"
 #include "RobotMap.h"
 #include "LiveWindow/LiveWindow.h"
-
+#include "Subsystems/VisionTracking.h"
 #include "Subsystems/Drivetrain.h"
 #include "Subsystems/CompressorSubsystem.h"
 #include "OI.h"
@@ -25,6 +25,7 @@ class Robot: public IterativeRobot
 public:
 	Command *autonomousCommand;
 	LiveWindow *lw;
+	static VisionTracking* visionTracking;
 	static DriveTrain* drivetrain;
 	static CompressorSubsystem* compressorSubsystem;
 	static Joystick* stick;

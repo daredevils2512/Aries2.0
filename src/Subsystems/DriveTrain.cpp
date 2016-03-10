@@ -29,3 +29,8 @@ void DriveTrain::InitDefaultCommand()
 void DriveTrain::Go(float move, float turn) {
 	robotDrive->ArcadeDrive(move, turn);
 }
+
+void DriveTrain::AutonTankDrive(double left, double right) {
+	//drives robot in tank mode using specified values
+	robotDrive->TankDrive(left, right);
+}

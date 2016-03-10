@@ -4,6 +4,7 @@
 #include "CommandBase.h"
 #include "Robot.h"
 
+VisionTracking* Robot::visionTracking = 0;
 DriveTrain* Robot::drivetrain = 0;
 CompressorSubsystem* Robot::compressorSubsystem = 0;
 OI* Robot::oi = 0;
@@ -13,6 +14,7 @@ void Robot::RobotInit()
 	CommandBase::init();
 	autonomousCommand = new ExampleCommand();
 	lw = LiveWindow::GetInstance();
+	visionTracking = new VisionTracking();
 	drivetrain = new DriveTrain();
 	compressorSubsystem = new CompressorSubsystem();
 	oi = new OI();

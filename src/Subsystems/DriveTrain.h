@@ -25,7 +25,7 @@ public:
 	DriveTrain();
 	void InitDefaultCommand();
 	void Go(float, float);
-
+	void AutonTankDrive(double left, double right);
 };
 
 #endif
