@@ -1,6 +1,6 @@
 #include "WPILib.h"
 #include "Commands/Command.h"
-#include "Commands/ExampleCommand.h"
+#include "Commands/Autonomous.h"
 #include "CommandBase.h"
 #include "Robot.h"
 
@@ -12,7 +12,7 @@ OI* Robot::oi = 0;
 void Robot::RobotInit()
 {
 	CommandBase::init();
-	autonomousCommand = new ExampleCommand();
+	autonomousCommand = new Autonomous();
 	lw = LiveWindow::GetInstance();
 	visionTracking = new VisionTracking();
 	drivetrain = new DriveTrain();

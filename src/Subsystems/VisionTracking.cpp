@@ -49,6 +49,16 @@ Nullable<double> VisionTracking::GetTargetX() {
 	}
 }
 
+bool VisionTracking::FinishTracking() {
+	if(!GetTargetX().HasValue()) {
+		return false;
+	}else if((GetTargetX().GetValue() < 141) && (GetTargetX().GetValue() > 125)) {
+		return true;
+	}else{
+		return false;
+	}
+}
+
 void VisionTracking::cameraAuton() {
 	//sets camera settings for autonomous
 	//filters out a lot of light to make vision tracking easier
